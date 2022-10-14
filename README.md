@@ -1,7 +1,25 @@
-# Vue 3 + Vite
+# 【 Tic Tac Toe 】井字棋
+## [DEMO](https://chanze7995.github.io/Tic-Tac-Toe/)
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+## 簡介
 
-## Recommended IDE Setup
+以 Vue3.js 練習製作井字棋遊戲，練習使用 Tailwind CSS。
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar)
+## 網頁架構
+
+- 井字棋畫面
+    - 判斷勝利條件
+    - 重置遊戲
+
+## 使用技術
+
+- **Vue.js, Vite**
+- **JavaScript ( ES6+ )**
+- **Tailwind CSS**
+
+## 作品介紹
+
+### 遊戲畫面
+
+![Game](/static/markdown-img/Game.png) 
+![Win](/static/markdown-img/Win.png) 

@@ -19,13 +19,13 @@
   </div>
 </template>
 <script setup>
-import { ref, computed } from 'vue';
-const player = ref('X');
+import { ref, computed } from 'vue'
+const player = ref('X')
 const board = ref([
   ['', '', ''],
   ['', '', ''],
-  ['', '', ''],
-]);
+  ['', '', '']
+])
 const calculateWinner = (board) => {
   // 勝利規則
   const lines = [
@@ -36,39 +36,39 @@ const calculateWinner = (board) => {
     [1, 4, 7],
     [2, 5, 8],
     [0, 4, 8],
-    [2, 4, 6],
-  ];
+    [2, 4, 6]
+  ]
   for (let i = 0; i < lines.length; i++) {
-    const [a, b, c] = lines[i];
+    const [a, b, c] = lines[i]
     // 檢測傳進來的參數陣列該相應位置的內容是否相同
     if (board[a] && board[a] === board[b] && board[a] === board[c]) {
-      return board[a];
+      return board[a]
     }
   }
-  return null;
-};
+  return null
+}
 const winner = computed(() => {
   console.log(calculateWinner(board.value.flat()))
-  return calculateWinner(board.value.flat());
-});
+  return calculateWinner(board.value.flat())
+})
 const gameStep = (x, y) => {
   if (winner.value) {
-    return ;
+
   } else if (board.value[x][y] !== '') {
-    return;
+
   } else {
-    board.value[x][y] = player.value;
-    player.value = player.value === 'X' ? 'O' : 'X';
+    board.value[x][y] = player.value
+    player.value = player.value === 'X' ? 'O' : 'X'
   }
-};
+}
 const resetGame = () => {
   board.value = [
     ['', '', ''],
     ['', '', ''],
-    ['', '', ''],
-  ];
-  player.value = 'X';
-};
+    ['', '', '']
+  ]
+  player.value = 'X'
+}
 </script>
 <style>
 
